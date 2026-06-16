@@ -1,0 +1,4 @@
+Contact: mailto:security@yukonlodge.example
+Expires: 2027-06-16T12:47:47.417Z
+Preferred-Languages: en, de, fr
+Canonical: https://YOUR-USERNAME.github.io/.well-known/security.txt
