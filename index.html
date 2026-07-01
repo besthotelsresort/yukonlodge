@@ -50,15 +50,15 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter', system-ui, sans-serif;min-height:100vh;color:#fff;display:flex;flex-direction:column;position:relative;overflow:hidden}
-body{background:linear-gradient(180deg,#1a2e1f 0%,#b8733333 45%,#1a2e1f 100%)}body::before{content:'';position:absolute;inset:-30%;background:conic-gradient(from 210deg at 50% 40%,#b8733322,transparent 25%,#8e582618,transparent 55%,#b8733315);z-index:0;animation:sweep 20s linear infinite}@keyframes sweep{to{transform:rotate(360deg)}}
+body{background:linear-gradient(145deg,#1a2e1f 0%,#1a2e1f 38%,#b8733366 68%,#8e5826bb 100%)}
 .main{position:relative;z-index:2;flex:1;display:flex;align-items:flex-start;justify-content:center;text-align:center;padding:clamp(40px,8vh,100px) 6% 40px}
 h1{font-family:'DM Serif Display', serif;font-size:clamp(46px, 8.5vw, 132px);line-height:0.95;font-weight:400;letter-spacing:-3px;margin-bottom:18px}
 .sub{font-family:'DM Serif Display', serif;font-size:22px;font-style:italic;color:rgba(255,255,255,.78);max-width:600px;margin:0 auto 28px}
 .rule{width:60px;height:1px;background:#b87333;margin:0 auto 28px}
 @keyframes ctaPulse{0%{transform:translateY(0);box-shadow:0 10px 26px #7ed95755,0 0 0 0 #7ed95788}55%{transform:translateY(-6px);box-shadow:0 28px 60px #7ed957cc,0 0 0 24px #7ed95700}100%{transform:translateY(0);box-shadow:0 10px 26px #7ed95755,0 0 0 0 #7ed95700}}
 @keyframes ctaShine{0%{left:-60%}45%{left:160%}100%{left:160%}}
-
-.btn{position:relative;overflow:hidden;display:inline-block;padding:clamp(24px,3.6vw,38px) clamp(58px,11vw,128px);background:#7ed957;color:#0a2410;text-decoration:none;border-radius:4px;font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:clamp(19px,2.8vw,28px);transition:transform .2s;animation:ctaPulse 1.9s ease-in-out infinite}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}.main h1,.main .sub,.main .rule{opacity:0;animation:fadeUp .7s ease forwards}.main h1{animation-delay:.1s}.main .sub{animation-delay:.22s}.main .rule{animation-delay:.32s}.main .btn{opacity:0;animation:fadeUp .7s ease .42s forwards,ctaPulse 1.9s ease-in-out infinite}
+.btn{position:relative;overflow:hidden;display:inline-block;padding:clamp(24px,3.6vw,38px) clamp(58px,11vw,128px);background:#7ed957;color:#0a2410;text-decoration:none;border-radius:4px;font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:clamp(19px,2.8vw,28px);transition:transform .2s;animation:fadeUp .7s ease .42s backwards, ctaPulse 1.9s ease-in-out infinite}
 .btn::before{content:'';position:absolute;top:0;left:-60%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:ctaShine 2.6s ease-in-out infinite}
 .btn:hover{animation-play-state:paused;transform:translateY(-3px)}
 @media(max-width:600px){.sub{font-size:17px}}
